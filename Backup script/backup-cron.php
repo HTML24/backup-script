@@ -6,6 +6,7 @@
 ## bm@html24.dk								   ##
 #################################################
 
+// READ THIS FIRST!! :-)
 // This script creates a backupfile in a folder called backup/backupfile.sql
 // The file is called the name of the MySQL database + a timestamp + .sql.
 // Create the folder "backup" in the same dir as this script.
