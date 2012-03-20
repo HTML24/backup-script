@@ -1,7 +1,16 @@
 <?php
 #################################################
 ## Backup CRONJOB API v 1.0                    ##
+## HTML24									   ##
+## Bo Møller								   ##
+## bm@html24.dk								   ##
 #################################################
+
+// This script creates a backupfile in a folder called backup/backupfile.sql
+// The file is called the name of the MySQL database + a timestamp + .sql.
+// Create the folder "backup" in the same dir as this script.
+// All backups will be stored there, so make sure that dir is not accessible from outside! Otherwise people will be able to download the database-dump.
+// The script will automatically send an e-mail with the newly created backup file.
 
 # ---------------- Settings ---------------- #
 
@@ -9,9 +18,9 @@ $db_user = "";
 $db_host = "";
 $db_password = "";
 $db_name = "";
-$email = "";
+$email = ""; // Who should the e-mail with the backup be sent to?
 $from_email = "";
-$path = "/usr/bin/mysqldump"
+$path = "/usr/bin/mysqldump"; // Don't change this unless you know what you're doing - this is a default path for mysqldump, which is normally installed on an Apache server.
 
 
 // Global vars
